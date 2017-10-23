@@ -1,0 +1,32 @@
+{
+  "name": "pmsfraidapi",
+  "version": "1.0.0",
+  "description": "PMSF Raid API",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "lint": "grunt lint",
+    "grunt": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Glennmen/PMSFRaidAPI.git"
+  },
+  "keywords": [
+    "pokemon",
+    "pokemongo",
+    "rocketmap",
+    "monocle"
+  ],
+  "author": "Glennmen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Glennmen/PMSFRaidAPI/issues"
+  },
+  "homepage": "https://github.com/Glennmen/PMSFRaidAPI#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-newer": "^1.2.0",
+    "jit-grunt": "^0.10.0",
+    "phplint": "^1.7.4"
+  }
+}
