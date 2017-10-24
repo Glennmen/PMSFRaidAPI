@@ -2,7 +2,12 @@
 include('config/config.php');
 global $map, $fork;
 
-if (!empty($_POST['type'])) {
+if (empty($raidApiKey)) {
+    http_response_code(401);
+    die();
+}
+
+if (!empty($_POST['key']) && $_POST['key'] == $raidApiKey && !empty($_POST['type'])) {
     if ($_POST['type'] == "config") {
         $data['lat'] = $startingLat;
         $data['lon'] = $startingLng;
