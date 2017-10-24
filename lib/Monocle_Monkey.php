@@ -2,14 +2,14 @@
 
 namespace Scanner;
 
-class RocketMap extends Scanner
+class Monocle_Monkey extends Monocle
 {
     public function get_gyms_api($swLat, $swLng, $neLat, $neLng)
     {
         $conds = array();
         $params = array();
 
-        $conds[] = "latitude > :swLat AND longitude > :swLng AND latitude < :neLat AND longitude < :neLng";
+        $conds[] = "f.lat > :swLat AND f.lon > :swLng AND f.lat < :neLat AND f.lon < :neLng";
         $params[':swLat'] = $swLat;
         $params[':swLng'] = $swLng;
         $params[':neLat'] = $neLat;
@@ -22,13 +22,11 @@ class RocketMap extends Scanner
     {
         global $db;
 
-        $query = "SELECT gym.gym_id, 
-        latitude, 
-        longitude,
+        $query = "SELECT f.external_id AS gym_id, 
+        f.lat AS latitude, 
+        f.lon AS longitude,
         name
-        FROM gym
-        LEFT JOIN gymdetails
-        ON gym.gym_id = gymdetails.gym_id
+        FROM forts f
         WHERE :conditions";
 
         $query = str_replace(":conditions", join(" AND ", $conds), $query);
