@@ -11,6 +11,7 @@
 
 $libs[] = "Scanner.php";
 $libs[] = "Monocle.php";
+$libs[] = "Monocle_Monkey.php";
 $libs[] = "RocketMap.php";
 
 // Include libraries
@@ -47,3 +48,4 @@ $raidApiKey = '';                                                   // Raid API 
 //-----------------------------------------------------
 
 $map = "monocle";                                                   // monocle/rm
+$fork = "default";                                                  // default/monkey/asner/sloppy

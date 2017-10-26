@@ -44,6 +44,7 @@ $raidApiKey = '';                                                   // Raid API 
 //-----------------------------------------------------
 
 $map = "monocle";                                                   // monocle/rm
+$fork = "default";                                                  // default/monkey/asner/sloppy
 
 $db = new Medoo([// required
     'database_type' => 'mysql',                                     // mysql/mariadb/pgsql/sybase/oracle/mssql/sqlite
