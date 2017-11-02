@@ -34,7 +34,9 @@ if (!empty($_POST['key']) && $_POST['key'] == $raidApiKey && !empty($_POST['type
         }
 
         if (strtolower($map) == "monocle") {
-            if (strtolower($fork) == "monkey") {
+            if (strtolower($fork) == "asner") {
+                $scanner = new \Scanner\Monocle_Asner();
+            } elseif (strtolower($fork) == "monkey") {
                 $scanner = new \Scanner\Monocle_Monkey();
             } else {
                 $scanner = new \Scanner\Monocle();

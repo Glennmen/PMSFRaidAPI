@@ -12,6 +12,7 @@
 $libs[] = "Scanner.php";
 $libs[] = "Monocle.php";
 $libs[] = "Monocle_Monkey.php";
+$libs[] = "Monocle_Asner.php";
 $libs[] = "RocketMap.php";
 
 // Include libraries
@@ -42,6 +43,7 @@ $title = "PMSF Glennmen";                                           // Title to 
 //-----------------------------------------------------
 
 $raidApiKey = '';                                                   // Raid API Key, '' to deny access
+$sendRaidData = false;                                              // Send Raid data, false to only send gym data
 
 //-----------------------------------------------------
 // DATABASE CONFIG
